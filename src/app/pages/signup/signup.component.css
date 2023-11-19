@@ -1,0 +1,9 @@
+.container-blue {
+    background-color: white;
+    padding: 50px;
+    border-radius: 50px;
+    box-shadow: 2px 14px 43px 0px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 2px 14px 43px 0px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: 2px 14px 43px 0px rgba(0, 0, 0, 0.6);
+    margin-top: 30px;
+}
