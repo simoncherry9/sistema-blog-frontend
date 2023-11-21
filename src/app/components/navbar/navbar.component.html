@@ -1,1 +1,26 @@
-<div class="text-center"></div>
+<mat-toolbar color="primary" class="containere-blue animate__animated animate__fadeInDown">
+    <a [routerLink]="'/'" mat-icon-button class="example-icon" arial-label="Example icon-button with menu icon">
+        <mat-icon>thumb_up</mat-icon>
+    </a>
+    <span>MyBlog</span>
+    <span class="example-spacer"></span>
+
+    <button mat-button [matMenuTriggerFor]="userMenu2" *ngIf="!isLoggedIn" class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon">
+        <mat-icon>person</mat-icon>
+    </button>
+
+    <mat-menu #userMenu2="matMenu">
+        <button mat-menu-item [routerLink]="'/login'">Iniciar sesión</button>
+        <button mat-menu-item [routerLink]="'/signup'">Registrarme</button>
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="userMenu" *ngIf="isLoggedIn && user" class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon">
+        {{ user.username }}
+    </button>
+
+    <mat-menu #userMenu="matMenu">
+        <button mat-menu-item (click)="logout()">Cerrar sesión</button>
+    </mat-menu>
+</mat-toolbar>
