@@ -21,6 +21,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { authInterceptorProviders } from './services/auth.interceptor';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { DashboardUserComponent } from './pages/user/dashboard-user/dashboard-user.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { DashboardUserComponent } from './pages/user/dashboard-user/dashboard-us
     LoginComponent,
     HomeComponent,
     DashboardComponent,
-    DashboardUserComponent
+    DashboardUserComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
