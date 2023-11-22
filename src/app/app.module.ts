@@ -26,6 +26,8 @@ import { DashboardUserComponent } from './pages/user/dashboard-user/dashboard-us
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
+import { WelcomeUserComponent } from './pages/user/welcome/welcome-user/welcome-user.component';
+import { SidebarUserComponent } from './pages/user/sidebar/sidebar-user/sidebar-user.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
     DashboardUserComponent,
     ProfileComponent,
     SidebarComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    WelcomeUserComponent,
+    SidebarUserComponent
   ],
   imports: [
     BrowserModule,
