@@ -55,8 +55,10 @@ export class SignupComponent implements OnInit {
         if (error.status === 500 && error.error && error.error.message) {
           if (error.error.message.includes('could not execute statement; SQL [n/a]; constraint [usuarios.email_UNIQUE]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement')) {
             Swal.fire('Error', 'El correo electrónico ya está en uso. Por favor, utiliza otro correo electrónico.', 'error');
-          } else if (error.error.message.includes('El usuario ya esta presente')) {
+          } if (error.error.message.includes('El usuario ya esta presente')) {
             Swal.fire('Error', 'Ya existe un usuario con ese nombre. Por favor, elige otro nombre de usuario.', 'error');
+          } else if (error.error.message.includes('could not execute statement; SQL [n/a]; constraint [usuarios.telefono_UNIQUE]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement')) {
+              Swal.fire('Error', 'El teléfono ya está en uso. Por favor, utiliza otro teléfono.', 'error');
           }
         } else {
           this.snack.open('Ha ocurrido un error en el sistema.', 'Aceptar', {
