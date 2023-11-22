@@ -19,7 +19,10 @@ import { LoginComponent } from './pages/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './pages/home/home.component';
 import { authInterceptorProviders } from './services/auth.interceptor';
+<<<<<<< HEAD
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+=======
+>>>>>>> f89ec5af8d707fd8505c2aee2ef8f552ad26dd76
 
 @NgModule({
   declarations: [
