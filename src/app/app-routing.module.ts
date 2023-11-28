@@ -43,7 +43,20 @@ const routes: Routes = [
     component : DashboardUserComponent,
     pathMatch : 'full',
     canActivate: [NormalGuard]
-  }
+  },
+  {
+    path: 'admin',
+    component : DashboardComponent,
+    canActivate : [AdminGuard],
+    children: [{
+      path : 'new-post',
+      component : ProfileComponent
+    },
+    {
+      path : '',
+      component : HomeComponent
+    }]
+  },
 ];
 
 @NgModule({

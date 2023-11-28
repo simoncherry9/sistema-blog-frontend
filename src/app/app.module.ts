@@ -28,6 +28,7 @@ import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 import { WelcomeUserComponent } from './pages/user/welcome/welcome-user/welcome-user.component';
 import { SidebarUserComponent } from './pages/user/sidebar/sidebar-user/sidebar-user.component';
+import { NewPostComponent } from './pages/admin/new-post/new-post.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { SidebarUserComponent } from './pages/user/sidebar/sidebar-user/sidebar-
     SidebarComponent,
     WelcomeComponent,
     WelcomeUserComponent,
-    SidebarUserComponent
+    SidebarUserComponent,
+    NewPostComponent
   ],
   imports: [
     BrowserModule,
